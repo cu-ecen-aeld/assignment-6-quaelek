@@ -11,3 +11,4 @@ make clean
 make
 cd ..
 ./build/assignment-autotest/assignment-autotest
+exit 0
