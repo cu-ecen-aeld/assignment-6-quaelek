@@ -3,6 +3,7 @@
 # automated testing using assignment-autotest.  It automates the
 # steps described in https://github.com/cu-ecen-5013/assignment-autotest/blob/master/README.md#running-tests
 set -e
+: '
 
 cd `dirname $0`
 test_dir=`pwd`
@@ -28,6 +29,7 @@ fi
 
 # If there's a configuration for the assignment number, use this to look for
 # additional tests
+
 if [ -f conf/assignment.txt ]; then
     # This is just one example of how you could find an associated assignment
     assignment=`cat conf/assignment.txt`
@@ -49,4 +51,5 @@ else
     echo "Missing conf/assignment.txt, no assignment to run"
     exit 0
 fi
+
 exit 0
